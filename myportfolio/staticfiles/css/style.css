@@ -1,0 +1,118 @@
+/* Base styles for body */
+body.astral-theme {
+    font-family: 'Arial', sans-serif;
+    background-color: #0d0f1f;
+    color: #ffffff;
+    overflow-x: hidden;
+    margin: 0;
+}
+
+/* Starry background */
+.stars, .twinkling {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.stars {
+    background: url('path-to-stars.png') repeat;
+    animation: starAnimation 100s linear infinite;
+    opacity: 0.8;
+}
+
+.twinkling {
+    background: url('path-to-twinkling.png') repeat;
+    animation: twinklingAnimation 1.5s infinite ease-in-out;
+    opacity: 0.5;
+}
+
+/* Animation keyframes */
+@keyframes starAnimation {
+    from { transform: translateY(0); }
+    to { transform: translateY(-1000px); }
+}
+
+@keyframes twinklingAnimation {
+    0%, 100% { opacity: 0.5; }
+    50% { opacity: 0.8; }
+}
+
+/* Header styling */
+header {
+    background: rgba(13, 15, 31, 0.8);
+    padding: 20px;
+    text-align: center;
+    color: #ffffff;
+}
+
+header h1 {
+    font-size: 2.5em;
+    font-weight: bold;
+    color: #ffdd57;
+}
+
+header nav a {
+    color: #ffffff;
+    margin: 0 15px;
+    font-size: 1.2em;
+    text-decoration: none;
+}
+
+header nav a:hover {
+    color: #ffdd57;
+}
+
+/* Section styling */
+.container {
+    position: relative;
+    z-index: 1;
+    padding: 40px;
+    text-align: center;
+}
+
+/* Project Cards */
+.project-card {
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+    color: #ffffff;
+    margin-bottom: 20px;
+}
+
+.project-card h3 {
+    color: #ffdd57;
+}
+
+.project-card p {
+    color: #b0b3c5;
+}
+
+/* Contact form */
+form input, form textarea, form button {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    border: none;
+}
+
+form input, form textarea {
+    background: rgba(255, 255, 255, 0.1);
+    color: #ffffff;
+}
+
+form button {
+    background-color: #ffdd57;
+    color: #333;
+    cursor: pointer;
+    border: none;
+    font-weight: bold;
+}
+
+form button:hover {
+    background-color: #ffcc00;
+}
